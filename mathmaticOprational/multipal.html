@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container{
+        padding: 10px;
+        margin: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .main{
+        padding: 10px;
+        margin: 10px;
+        display: inline-block;
+        font-weight: bold;
+      }
+      ul li{
+        padding: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <div class="container">
+       <ul>
+        <li>1st Number:
+        <input type="text" id="firstnumber" /></li>
+         <li>2nd Number: <input type="text" id="secondnumber" /></li>
+         <input type="button" onclick="multiplyBy()" value="Multiply" />
+         <input type="button" onclick="devideBy()" value="Devide" />
+        </ul> 
+      </form>
+      <p class="main">The results is:   </p>
+    </div>
+    <div id="result"></div>
+    <script src="multipal.js"></script>
+  </body>
+</html>

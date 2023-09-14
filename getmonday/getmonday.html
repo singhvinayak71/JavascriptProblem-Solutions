@@ -1,0 +1,24 @@
+<!-- Write a JavaScript profgram to find which 1st January is being Sunday between 2014 and 2050. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A pragram to find Sunday</title>     
+    <script>
+        console.log('------------------')
+        for(year=2014; year<=2050; year++){
+            let d = new Date(year,0,1)
+            if(d.getDay()==1)
+            // document.write( year+" :- 1st January is a being a Monday "+ "<hr>")
+            console.log( year+" :- 1st January is a being a Monday ")
+        }
+        console.log("---------------")
+    </script>
+</head>
+<body>
+    <div class="container"></div>
+</body>
+</html>
