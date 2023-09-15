@@ -7,7 +7,7 @@
 // );
 // console.log(obj);
 
-        // example2
+        //--------- example2
 // Using the Object.assign() method to convert an array to an object ,e.g. const obj = Object.assign({}, arr).
 // const names = ['Alex', 'Bob', 'Johny', 'Atta']
 
@@ -15,20 +15,31 @@
 
 // console.log(obj)
 
-        // example3 - using spred operator
+        //-------- example3 - using spred operator
 
 // const newarr = ['hello', 'goodMorning']
 // let myobj = {...newarr}
 // console.log(myobj);
 
-        // example4 - using Array.forEach() method
 
-const names = ['Alex', 'Bob', 'Johny', 'Atta']
+        //------- example4 - using Array.forEach() method
 
-const obj = {}
+// const names = ['Alex', 'Bob', 'Johny', 'Atta']
 
-names.forEach((elem, i) => {
-  obj[i] = elem
-})
+// const obj = {}
 
-console.log(obj)
+// names.forEach((elem, i) => {
+//   obj[i] = elem
+// })
+
+// console.log(obj)
+
+        //--------- Example5 - 
+
+  const names = [
+        ['name', 'vinayak singh'],
+        ['age', 27]
+  ]
+
+  const obj = Object.fromEntries(names)
+  console.log(obj)
