@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Table Up to a Range</title>
+</head>
+<body>
+    
+    <script>
+
+        const number = parseInt(prompt("Enter A Interger: "));
+        const range = parseInt(prompt("Enter A Interger: "))
+
+        for(let i=1; i<=range; i++){
+            const result = i * number;
+            console.log(`${number} * ${i} = ${result}`)
+            // data.innerHTML = `${number} * ${i} = ${result}`
+        }
+    </script>
+</body>
+</html>
