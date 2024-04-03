@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find the squre root</title>
+</head>
+<body>
+    <h1>Find the squre root</h1>
+    <input type="number" id="number">
+    <button onclick="getRoot()">Get Root</button>
+    <p id="rootValue"></p>
+    
+    <script>
+        // const number = prompt("Enter a number")
+        function getRoot(){
+            const number = document.getElementById("number").value;
+        const result = Math.sqrt(number)
+        document.getElementById("rootValue").innerHTML = `<span>&#8730;</span>${number} = ${result.toFixed(3)}`
+        console.log(result)
+        }
+    </script>
+</body>
+</html>
