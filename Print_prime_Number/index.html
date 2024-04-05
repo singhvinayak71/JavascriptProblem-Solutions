@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print prime number</title>
+</head>
+
+<body>
+    <h2>Prime number</h2>
+    <input type="text" id="lowerNumber"><br>
+    <input type="text" id="higherNumber"><br>
+    <h2 id="paragraph"></h2>
+    <h3 id="result"></h3>
+    <button onclick="getPrimeNumber()">get prime number</button>
+    <script>
+        // take input from the user
+        // const lowerNumber = parseInt(prompt('Enter lower number: '));
+        // const higherNumber = parseInt(prompt('Enter higher number: '));
+
+        function getPrimeNumber() {
+            const lowerNumber = document.getElementById("lowerNumber").value;
+            const higherNumber = document.getElementById("higherNumber").value;
+            const result = document.getElementById("result")
+            const paragraph = document.getElementById("paragraph")
+            console.log(`The prime numbers between ${lowerNumber} and ${higherNumber} are:`);
+
+            // looping from lowerNumber to higherNumber
+            for (let i = lowerNumber; i <= higherNumber; i++) {
+                let flag = 0;
+
+                // looping through 2 to user input number
+                for (let j = 2; j < i; j++) {
+                    if (i % j == 0) {
+                        flag = 1;
+                        break;
+                    }
+                }
+
+                // if number greater than 1 and not divisible by other numbers
+                if (i > 1 && flag == 0) {
+                    console.log(i);
+                    paragraph.innerHTML = `The prime numbers between ${lowerNumber} to ${higherNumber} are:`
+                    result.innerHTML += `${i}<br>`;
+                }
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>
