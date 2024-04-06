@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lowest common Factor</title>
+</head>
+
+<body>
+    <h2>Lowest common factor(HCF)</h2>
+    <input type="text" id="number1"><br>
+    <input type="text" id="number2"><br>
+    <input type="text" id="number3"><br>
+    <p id="result"></p>
+    <button onclick="getLcm()">getLcm</button>
+
+    <script>
+
+        function getLcm() {
+            const number1 = document.getElementById("number1").value;
+            const number2 = document.getElementById("number2").value;
+            const number3 = document.getElementById("number3").value;
+
+            let min = (number1 > number2) ? number1 : number2;
+
+            // while loop
+            while (true) {
+                if (min % number1 == 0 && min % number2 == 0 && min % number3 == 0) {
+                    console.log(`The LCM of ${number1}, ${number2} and ${number3} is ${min}`);
+                    break;
+                }
+                min++;
+            }
+            document.getElementById("result").innerHTML = `the LCM of ${number1}, ${number2} and ${number3} is - ${min}`
+        }
+    </script>
+</body>
+
+</html>
