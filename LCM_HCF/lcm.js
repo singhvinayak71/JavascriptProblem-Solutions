@@ -2,8 +2,8 @@
 
 let hcf;
 // take input
-const number1 = 40;
-const number2 = 15;
+const number1 = 648;
+const number2 = 567;
 
 // looping from 1 to number1 and number2 to find HCF
 for (let i = 1; i <= number1 && i <= number2; i++) {
