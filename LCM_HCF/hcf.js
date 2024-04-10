@@ -57,3 +57,27 @@
 
 // console.log("LCM of", numbers.join(", "), "is", result);
 
+//      Question -- The sum of two numbers is 528 and their HCF is 33. the number of pairs of numbers are posiable? 
+// 
+
+function countPairs(sum, hcf) {
+    let count = 0;
+
+    // Finding factors of (sum - hcf) which are less than or equal to hcf
+    for (let i = 1; i <= hcf; i++) {
+        if ((sum - hcf) % i === 0 && hcf % i === 0) {
+            count++;
+        }
+    }
+
+    return count;
+}
+
+const sum = 1224;
+const hcf = 68;
+const pairs = countPairs(sum, hcf);
+console.log("Number of pairs of numbers:", pairs);
+
+
+
+
