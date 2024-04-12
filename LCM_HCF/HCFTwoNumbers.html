@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highst Common Factor</title>
+</head>
+<body>
+
+    <h2>Highst Common Factor(HCF)</h2>
+
+    <input type="text" id="number1"><br>
+    <input type="text" id="number2"><br>
+    <!-- <input type="text" id="number3"><br> -->
+    <p id="result"></p>
+    <button onclick="GetHcf()">Get HCF</button>
+</body>
+<script>
+    function GetHcf(){
+        const number1 = document.getElementById("number1").value;
+        const number2 = document.getElementById("number2").value;
+        // const number3 = document.getElementById("number3").value;
+
+            let hcf;
+
+        for(let i = 0; i<= number1 && i<=number2; i++){
+            if(number1%i == 0 && number2%i == 0){
+                hcf = i;
+            }
+        }
+        console.log(`HCF of ${number1} and ${number2} is ${hcf}.`);
+    document.getElementById("result").innerHTML = `${number1} and ${number2} HCF is - ${hcf}`
+
+    }
+ 
+</script>
+</html>
